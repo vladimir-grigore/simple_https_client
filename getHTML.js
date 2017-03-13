@@ -23,7 +23,7 @@ function getHTML (options, callback) {
 
     //Display all the data when reaching the end of the stream
     response.on('end', function(){
-      console.log(data);
+      callback(data);
     });
   });
 
