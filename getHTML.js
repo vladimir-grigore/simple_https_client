@@ -3,7 +3,7 @@ var https = require('https');
 //Create placeholder to store all the response
 var data = '';
 
-module.exports = function getHTML (options, callback) {
+function getHTML (options, callback) {
 
   //* Add your code here */
   https.get(options, function(response){
