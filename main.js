@@ -13,8 +13,19 @@ function getAndPrintHTMLChunks () {
     //Set encoding to utf-8
     response.setEncoding('utf-8');
 
+    //Print out the https response
     response.on('data', function(chunk){
       console.log("%s \n", chunk);
+    });
+
+    //Handle error responses
+    response.on('error', function(err){
+      console.log("Error:", err.stack);
+    });
+
+    //Mark the end of the stream
+    response.on('end', function(){
+      console.log("Reached the end of the stream.");
     });
   });
 }
