@@ -6,7 +6,7 @@ var data = '';
 function getAndPrintHTML (options) {
 
   /* Add your code here */
-  https.get(requestOptions, function(response){
+  https.get(options, function(response){
 
     //Set encoding to utf-8
     response.setEncoding('UTF8');
@@ -33,3 +33,5 @@ var requestOptions = {
   host: 'sytantris.github.io',
   path: '/http-examples/step3.html'
 };
+
+getAndPrintHTML(requestOptions);
